@@ -103,6 +103,15 @@ async function handleSignup(e) {
               )}
             </button>
             </form>
+              <div className="mt-6 text-center">
+              <p className="text-slate-600">Already have an account?</p>
+              <button
+                onClick={() => navigate("/signin")}
+                className="mt-2 w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-3 px-4 rounded-xl transition-all duration-200"
+              >
+                Sign in
+              </button>
+            </div>
         </div>
       </div>
     </div>

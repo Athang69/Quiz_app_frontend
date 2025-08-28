@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Dashboard from "./components/Dashboard";
+import AttemptQuiz from "./components/AttemptQuiz";
+
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem("token");
@@ -22,6 +24,7 @@ export default function App() {
             </PrivateRoute>
           }
         />
+        <Route path="/attempt/:id" element={<AttemptQuiz />} />
         <Route path="*" element={<Navigate to="/signup" />} />
       </Routes>
     </Router>
