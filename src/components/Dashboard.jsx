@@ -127,7 +127,7 @@ export default function Dashboard() {
       <h1 className="text-2xl font-bold mb-4">Quiz Dashboard</h1>
 
       <button
-        className="px-3 py-1 mb-4 bg-green-600 text-white rounded"
+        className="px-3 py-1 mb-4 bg-green-600 text-white rounded cursor-pointer"
         onClick={() => setAddingQuiz(true)}
       >
         + Add Quiz
@@ -181,7 +181,7 @@ export default function Dashboard() {
                     className="flex-1 p-2 border rounded"
                   />
                   <button
-                    className="px-2 py-1 bg-red-500 text-white rounded"
+                    className="px-2 py-1 bg-red-500 text-white rounded cursor-pointer"
                     onClick={() => removeOption(qIndex, oIndex)}
                   >
                     Remove
@@ -189,7 +189,7 @@ export default function Dashboard() {
                 </div>
               ))}
               <button
-                className="px-2 py-1 bg-blue-500 text-white rounded mb-2"
+                className="px-2 py-1 bg-blue-500 text-white rounded mb-2 cursor-pointer"
                 onClick={() => addOption(qIndex)}
               >
                 + Add Option
@@ -208,7 +208,7 @@ export default function Dashboard() {
                 />
               </label>
               <button
-                className="px-2 py-1 bg-red-600 text-white rounded"
+                className="px-2 py-1 bg-red-600 text-white rounded cursor-pointer"
                 onClick={() => removeQuestion(qIndex)}
               >
                 Remove Question
@@ -217,19 +217,19 @@ export default function Dashboard() {
           ))}
 
           <button
-            className="px-2 py-1 bg-purple-500 text-white rounded mr-2"
+            className="px-2 py-1 bg-purple-500 text-white rounded mr-2 cursor-pointer"
             onClick={addQuestion}
           >
             + Add Question
           </button>
           <button
-            className="px-3 py-1 bg-green-600 text-white rounded mr-2"
+            className="px-3 py-1 bg-green-600 text-white rounded mr-2 cursor-pointer"
             onClick={handleAddQuiz}
           >
             Save Quiz
           </button>
           <button
-            className="px-3 py-1 bg-gray-400 text-white rounded"
+            className="px-3 py-1 bg-gray-400 text-white rounded cursor-pointer"
             onClick={() => setAddingQuiz(false)}
           >
             Cancel
@@ -301,7 +301,7 @@ export default function Dashboard() {
               </div>
             )}
 
-            <button onClick={() => navigate(`/attempt/${quiz.quizId}`)}>
+            <button onClick={() => navigate(`/attempt/${quiz.quizId}`)} className="border rounded-md cursor-pointer p-2 bg-green-600 text-white mt-2">
               Attempt Quiz
             </button>
 
